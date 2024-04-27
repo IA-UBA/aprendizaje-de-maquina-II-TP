@@ -1,0 +1,70 @@
+{
+  "columns": [
+    "ph",
+    "Hardness",
+    "Solids",
+    "Chloramines",
+    "Sulfate",
+    "Conductivity",
+    "Organic_carbon",
+    "Trihalomethanes",
+    "Turbidity"
+  ],
+  "columns_after_imputation": [
+    "ph",
+    "Hardness",
+    "Solids",
+    "Chloramines",
+    "Sulfate",
+    "Conductivity",
+    "Organic_carbon",
+    "Trihalomethanes",
+    "Turbidity"
+  ],
+  "target_col": "Potability",
+  "columns_dtypes": {
+    "ph": "float64",
+    "Hardness": "float64",
+    "Solids": "float64",
+    "Chloramines": "float64",
+    "Sulfate": "float64",
+    "Conductivity": "float64",
+    "Organic_carbon": "float64",
+    "Trihalomethanes": "float64",
+    "Turbidity": "float64"
+  },
+  "columns_dtypes_after_imputation": {
+    "ph": "float64",
+    "Hardness": "float64",
+    "Solids": "float64",
+    "Chloramines": "float64",
+    "Sulfate": "float64",
+    "Conductivity": "float64",
+    "Organic_carbon": "float64",
+    "Trihalomethanes": "float64",
+    "Turbidity": "float64"
+  },
+  "date": "2024/04/27-02:55:48\"",
+  "standard_scaler_mean": [
+    7.071452447800572,
+    196.58924125465128,
+    22093.03897242296,
+    7.117078395902185,
+    334.0371446610469,
+    426.18249640043035,
+    14.217920062989224,
+    66.38253157923295,
+    3.9753302672011537
+  ],
+  "standard_scaler_std": [
+    1.5053907317007005,
+    32.92239598904464,
+    8794.721755298462,
+    1.608086963919512,
+    36.51583163474343,
+    80.96620209702174,
+    3.25236366915103,
+    15.982715132508245,
+    0.7946171897373229
+  ]
+}
