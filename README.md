@@ -1,7 +1,12 @@
-# Ejemplo de ambiente productivo
-### AMq2 - CEIA - FIUBA
-Estructura de servicios para la implementación del proyecto final de AMq2 - CEIA - FIUBA
+# Aprendizaje de Maquina II - TP
 
+El trabajo se basa en la puesta de producción de un [modelo de clasificación](https://github.com/IA-UBA/aprendizaje-de-maquina-I) (presentado para Aprendizaje de Maquina I) utilizando los datos de [Water Quality](https://www.kaggle.com/datasets/adityakadiwal/water-potability).
+
+## Miembros del Grupo:
+- Ing. Ernesto Rincon - eeng.rincon@gmail.com
+- Ing. Andrés Malvestiti - malvestitiandres@gmail.com
+
+## Conexto
 Supongamos que trabajamos para **ML Models and something more Inc.**, la cual ofrece un servicio 
 que proporciona modelos mediante una REST API. Internamente, tanto para realizar tareas de 
 DataOps como de MLOps, la empresa cuenta con varios servicios que ayudan a ejecutar las 
@@ -47,12 +52,15 @@ Desde **ML Models and something more Inc.** autorizan a extender los requisitos 
 También pueden utilizar nuevos servicios (por ejemplo, una base de datos no relacional, 
 otro orquestador como MetaFlow, un servicio de API mediante NodeJs, etc.).
 
-### Ejemplo 
+## Troubleshooting
 
-El [branch `example_implementation`](https://github.com/facundolucianna/amq2-service-ml/tree/example_implementation) 
-contiene un ejemplo de aplicación para guiarse. Se trata de una implementación de un modelo de 
-clasificación utilizando los datos de 
-[Heart Disease](https://archive.ics.uci.edu/dataset/45/heart+disease).
+Si el servicio de ML Flow no inicia:
+
+Causa: `database "mlflow_db" does not exist`
+Solucion:
+1. Entrar al container de `postgres`
+2. Ingresar con el usuario de airflow `psql -U airflow`
+3. Crear la base de datos faltantes: `CREATE DATABASE mlflow_db;`
 
 ## Instalación
 
@@ -185,16 +193,3 @@ en la consola.
 
 Si tienes acceso a AWS S3, ten mucho cuidado de no reemplazar tus credenciales de AWS. Si usas las variables 
 de entorno, no tendrás problemas.
-
-
-## Pull Request
-
-Este repositorio está abierto para que realicen sus propios Pull Requests y así contribuir a 
-mejorarlo. Si desean realizar alguna modificación, **¡son bienvenidos!** También se pueden crear 
-nuevos entornos productivos para aumentar la variedad de implementaciones, idealmente en diferentes `branches`. 
-Algunas ideas que se me ocurren que podrían implementar son:
-
-- Reemplazar Airflow y MLflow con [Metaflow](https://metaflow.org/) o [Kubeflow](https://www.kubeflow.org).
-- Implementar Airflow con ejecutores de Celery y [Flower](https://airflow.apache.org/docs/apache-airflow/stable/security/flower.html).
-- Reemplazar MLflow con [Seldon-Core](https://github.com/SeldonIO/seldon-core).
-- Agregar un servicio de tableros como, por ejemplo, [Grafana](https://grafana.com).
