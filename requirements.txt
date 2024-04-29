@@ -1,0 +1,10 @@
+awswrangler
+mlflow
+mlflow_aux
+datetime
+optuna
+scikit-learn
+numpy
+pandas
+seaborn
+matplotlib
